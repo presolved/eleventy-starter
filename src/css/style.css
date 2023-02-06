@@ -1,0 +1,23 @@
+/* fixed width only on sm and up */
+@media (min-width: 640px) {
+  .w-fixed {
+    flex: 0 1 300px;
+    min-width: 300px;
+  }
+}
+
+img[alt='full-logo'] {
+  width: 300px;
+  margin: 20px;
+}
+
+img[alt='screenshot'] {
+  width: 600px;
+  margin: 20px;
+}
+
+hr {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity)) !important;
+}
