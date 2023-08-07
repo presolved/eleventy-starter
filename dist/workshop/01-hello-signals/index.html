@@ -1,0 +1,181 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Signals</title>
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+        rel="stylesheet">
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+
+  <body class="bg-gray-100 tracking-wider min-h-screen">
+    <nav id="header" class="sticky w-full z-10 top-0 bg-white border-b border-gray-400">
+  <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
+    <div class="pl-4 flex items-center">
+      <a href="/"><img class="w-64 pr-3" src="/assets/images/logo.png" alt="Logo"></a>
+      <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-2xl" href="/"> 
+        Main Site Title
+      </a>
+    </div>
+    <div class="block lg:hidden pr-4">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+      <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+      </div>
+      <ul class="list-reset lg:flex justify-end items-center">
+        <li class="mr-3 py-2 lg:py-0">
+          <a class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" target="_blank" href="https://github.com/onehungrymind/phaser3-platform-jumper">
+            <img class="h-10 bg-blend-multiply" src="/assets/images/github-mark.png" alt="GitHub Repo">
+          </a>
+        </li>
+        <li class="mr-3 py-2 lg:py-0">
+          <a class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" target="_blank" href="https://stackblitz.com/edit/phaser3-platform-jumper">
+            <img class="h-10 bg-blend-multiply" src="/assets/images/stackblitz-mark.png" alt="Edit on StackBlitz">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      
+  <div class="w-full lg:w-1/5 lg:px-6 text-xl text-gray-800 leading-normal">
+    <h3 class="font-bold">Steps</h3>
+    <div class="block lg:hidden sticky inset-0">
+      <button id="menu-toggle"
+              class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-purple-500 appearance-none focus:outline-none">
+        <svg class="fill-current h-3 float-right"
+             viewBox="0 0 20 20"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
+         style="top:5em"
+         id="menu-content">
+      <ul class="list-reset">
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          <a href="/workshop/"
+             class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+            <span class="pb-1 md:pb-0 text-sm text-gray-900">Home</span>
+          </a>
+        </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/00-getting-started/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Getting Started</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/01-hello-signals/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:border-purple-500 lg:hover:border-purple-500 font-bold ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Hello Signals</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/02-updating-signals/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Updating Signals</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/03-computing-signals/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Computing Signals</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/04-signal-effects/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Signal Effects</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+      <div class="w-full prose max-w-none lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded">
+        
+<article><h1>Hello Signals</h1>
+<hr>
+<p>The easiest place to start with Signals is to convert simple properties into signals. In this step, we will convert the <strong>message</strong>, <strong>currentAttempt</strong>, <strong>currentTile</strong>, and <strong>solved</strong> properties into signals.</p>
+<pre class="language-javascript"><code class="language-javascript">currentAttempt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br>currentTile <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br>message <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span><br>solved <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></code></pre>
+<p>We do this by calling the <strong>signal</strong> function and passing in an initial value.</p>
+<pre class="language-javascript"><code class="language-javascript">message <span class="token operator">=</span> <span class="token function">signal</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>currentAttempt <span class="token operator">=</span> <span class="token function">signal</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>currentTile <span class="token operator">=</span> <span class="token function">signal</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>solved <span class="token operator">=</span> <span class="token function">signal</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>If we wanted to set the <strong>message</strong> signal to be something other than an empty string, we would just pass in the value we want to use as the initial message.</p>
+<pre class="language-javascript"><code class="language-javascript">message <span class="token operator">=</span> <span class="token function">signal</span><span class="token punctuation">(</span><span class="token string">'Try to guess the word in six tries or less'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>To read a signal, we just call it like a function without any parameters.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ message() }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<p>A typical conversion to signals is pretty simple in that you are going to spend most of your time
+turning properties into function calls.</p>
+<p>The <strong>keyEvent</strong> function is a good example of what this would look like.</p>
+<pre class="language-javascript"><code class="language-javascript">@<span class="token function">HostListener</span><span class="token punctuation">(</span><span class="token string">'body:keyup'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'$event'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><br><span class="token function">keyEvent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> key<span class="token punctuation">,</span> which <span class="token punctuation">}</span><span class="token operator">:</span> KeyboardEvent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token constant">BACKSPACE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">deleteLetter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token constant">ESCAPE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resetGame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token constant">ENTER</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isAtEnd</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">checkAttempt</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentAttempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span>which<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isAtEnd</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addLetter</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<p>Another example would be how we update the <strong>addLetter</strong> and <strong>deleteLetter</strong> methods.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">addLetter</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">key</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateTile</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentAttempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">nextTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token function">deleteLetter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">prevTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateTile</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentAttempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Updating a signal is done by calling the <strong>set</strong> method and passing in the new value. There are a few variations on how to update a signal, but the <strong>set</strong> method is the easiest to understand.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">resetSolved</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span>solved<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token function">resetCurrentAttempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span>currentAttempt<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token function">resetCurrentTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span>currentTile<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>In the code above, we are setting the <strong>solved</strong> signal to <strong>false</strong>, the <strong>currentAttempt</strong> signal to <strong>0</strong>, and the <strong>currentTile</strong> signal to <strong>0</strong>.</p>
+<p>As much as we are huge fans of RxJS and the power of observable streams, we love the simplicity of Signals.</p>
+<h2>Challenges</h2>
+<ul>
+<li>Convert the <strong>message</strong> property into a signal and set a default value</li>
+<li>Update the template to use the <strong>message</strong> signal</li>
+<li>Convert the <strong>currentAttempt</strong> property into a signal and set a default value</li>
+<li>Convert the <strong>currentTile</strong> property into a signal and set a default value</li>
+<li>Convert the <strong>solved</strong> property into a signal and set a default value</li>
+<li>Update the code to use the new signals starting with the <strong>keyEvent</strong> method</li>
+<li>Update <strong>resetSolved</strong>, <strong>resetCurrentAttempt</strong>, and <strong>resetCurrentTile</strong> to set simple values on the signals</li>
+</ul>
+<pre class="language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">You're doing great!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</article>
+
+      </div>
+      
+  <div class="w-full lg:w-4/5 lg:ml-auto text-base md:text-sm text-gray-500 px-4 py-6">
+    <span class="text-base text-purple-500 font-bold">&lt;</span>
+    <a href="/workshop"
+       class="text-base md:text-sm text-purple-500 font-bold no-underline hover:underline">Workshop Home</a>
+  </div>
+
+    </div>
+    <footer class="sticky top-[100vh] bg-white border-t border-gray-400 shadow">
+  <div class="container mx-auto flex py-8">
+    <div class="w-full mx-auto flex flex-wrap">
+      <div class="flex w-full lg:w-1/2 ">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">The Reason</h3>
+          <p class="py-4 text-gray-600 text-sm">
+            Programming has changed our lives in ways we could have never imagined. This site is a gift to help you on your programming journey. <strong>We hope you love this adventure!</strong>
+          </p>
+        </div>
+      </div>
+      <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">Made with Love</h3>
+          <a class="inline-block py-2 text-gray-900 font-bold no-underline" target="_blank" href="https://presolved.io">
+            <img class="h-12 bg-blend-multiply" src="/assets/images/presolved-logo-filled.png" alt="Presolved">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </html>

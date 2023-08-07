@@ -1,6 +1,6 @@
 ---
 title: 11ty Starter
-layout: base.njk
+layout: page-landing.njk
 templateEngineOverride: njk,md
 ---
 

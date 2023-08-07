@@ -1,8 +1,8 @@
 ---
-title: Initializing Project
-layout: post.njk
+title: Getting Started
+layout: page-post.njk
 templateEngineOverride: njk,md
-date: 2023-01-02
+date: 2023-01-01
 ---
 
 # {{ title }}

@@ -1,0 +1,168 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updating Signals</title>
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+        rel="stylesheet">
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+
+  <body class="bg-gray-100 tracking-wider min-h-screen">
+    <nav id="header" class="sticky w-full z-10 top-0 bg-white border-b border-gray-400">
+  <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
+    <div class="pl-4 flex items-center">
+      <a href="/"><img class="w-64 pr-3" src="/assets/images/logo.png" alt="Logo"></a>
+      <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-2xl" href="/"> 
+        Main Site Title
+      </a>
+    </div>
+    <div class="block lg:hidden pr-4">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+      <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+      </div>
+      <ul class="list-reset lg:flex justify-end items-center">
+        <li class="mr-3 py-2 lg:py-0">
+          <a class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" target="_blank" href="https://github.com/onehungrymind/phaser3-platform-jumper">
+            <img class="h-10 bg-blend-multiply" src="/assets/images/github-mark.png" alt="GitHub Repo">
+          </a>
+        </li>
+        <li class="mr-3 py-2 lg:py-0">
+          <a class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" target="_blank" href="https://stackblitz.com/edit/phaser3-platform-jumper">
+            <img class="h-10 bg-blend-multiply" src="/assets/images/stackblitz-mark.png" alt="Edit on StackBlitz">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      
+  <div class="w-full lg:w-1/5 lg:px-6 text-xl text-gray-800 leading-normal">
+    <h3 class="font-bold">Steps</h3>
+    <div class="block lg:hidden sticky inset-0">
+      <button id="menu-toggle"
+              class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-purple-500 appearance-none focus:outline-none">
+        <svg class="fill-current h-3 float-right"
+             viewBox="0 0 20 20"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
+         style="top:5em"
+         id="menu-content">
+      <ul class="list-reset">
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          <a href="/workshop/"
+             class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+            <span class="pb-1 md:pb-0 text-sm text-gray-900">Home</span>
+          </a>
+        </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/00-getting-started/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Getting Started</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/01-hello-signals/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Hello Signals</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/02-updating-signals/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:border-purple-500 lg:hover:border-purple-500 font-bold ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Updating Signals</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/03-computing-signals/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Computing Signals</span>
+            </a>
+          </li>
+        
+          <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+            <a href="/workshop/04-signal-effects/"
+               class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent  lg:hover:border-gray-400 ">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900">Signal Effects</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+      <div class="w-full prose max-w-none lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded">
+        
+<article><h1>Updating Signals</h1>
+<hr>
+<p>In a slightly more complex example (barely), we are going to update <strong>message</strong> signal by calling <strong>set</strong> that relies on some string literal interpolation.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">checkAttempt</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">attempt</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token comment">//...</span><br><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isChosenWord</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">const</span> attempts <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>currentAttempt <span class="token operator">></span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'attempts'</span> <span class="token operator">:</span> <span class="token string">'attempt'</span><span class="token punctuation">;</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span>message <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Congratulations! You solved the word in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentAttempt<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>attempts<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<p>The differences are so minimal, we did a double take on this code snippet more than once because they looked exactly the same.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">checkAttempt</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">attempt</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token comment">//...</span><br><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isChosenWord</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">const</span> attempts <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>currentAttempt <span class="token operator">></span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'attempts'</span> <span class="token operator">:</span> <span class="token string">'attempt'</span><span class="token punctuation">;</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Congratulations! You solved the word in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentAttempt<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>attempts<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<p>A more interesting example is how we update the <strong>currentAttempt</strong> and <strong>currentTile</strong> signals.</p>
+<p>We are going to use the <strong>update</strong> method which takes a function that returns the new value for the signal. The inline function is passed the current value of the signal and we can use that to calculate the new value.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">nextAttempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span>currentAttempt<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=></span> value <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token function">nextTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span>currentTile<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=></span> value <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token function">prevTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">currentTile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">this</span><span class="token punctuation">.</span>currentTile<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=></span> value <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>We are doing simple increment and decrement operations, but you can imagine how this could be used to do more complex operations.</p>
+<h2>Challenges</h2>
+<ul>
+<li>Update the <strong>checkAttempt</strong> method to use the <strong>set</strong> method on the <strong>message</strong> signal.</li>
+<li>Update the <strong>nextAttempt</strong> method to use the <strong>update</strong> method on the <strong>currentAttempt</strong> signal.</li>
+<li>Update the <strong>nextTile</strong> method to use the <strong>update</strong> method on the <strong>currentTile</strong> signal.</li>
+<li>Update the <strong>prevTile</strong> method to use the <strong>update</strong> method on the <strong>currentTile</strong> signal.</li>
+</ul>
+<pre class="language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">🔥🔥🔥</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</article>
+
+      </div>
+      
+  <div class="w-full lg:w-4/5 lg:ml-auto text-base md:text-sm text-gray-500 px-4 py-6">
+    <span class="text-base text-purple-500 font-bold">&lt;</span>
+    <a href="/workshop"
+       class="text-base md:text-sm text-purple-500 font-bold no-underline hover:underline">Workshop Home</a>
+  </div>
+
+    </div>
+    <footer class="sticky top-[100vh] bg-white border-t border-gray-400 shadow">
+  <div class="container mx-auto flex py-8">
+    <div class="w-full mx-auto flex flex-wrap">
+      <div class="flex w-full lg:w-1/2 ">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">The Reason</h3>
+          <p class="py-4 text-gray-600 text-sm">
+            Programming has changed our lives in ways we could have never imagined. This site is a gift to help you on your programming journey. <strong>We hope you love this adventure!</strong>
+          </p>
+        </div>
+      </div>
+      <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">Made with Love</h3>
+          <a class="inline-block py-2 text-gray-900 font-bold no-underline" target="_blank" href="https://presolved.io">
+            <img class="h-12 bg-blend-multiply" src="/assets/images/presolved-logo-filled.png" alt="Presolved">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </html>

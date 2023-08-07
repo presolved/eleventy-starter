@@ -1,0 +1,5 @@
+{
+  "layout": "step",
+  "permalink": "workshop/{{ page.fileSlug }}/",
+  "tags": "steps"
+}

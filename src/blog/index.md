@@ -1,11 +1,10 @@
 ---
-title: Getting Started
-layout: post.njk
+title: Blog Section
+layout: page-blog.njk
 templateEngineOverride: njk,md
-date: 2023-01-01
 ---
 
-# {{ title }}
+# Blog
 ---
 
 ```javascript

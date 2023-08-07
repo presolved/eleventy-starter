@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/style.css"/>
+  </head>
+  <body class="bg-gray-100 tracking-wider min-h-screen">
+    <nav id="header" class="sticky w-full z-10 top-0 bg-white border-b border-gray-400">
+  <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
+    <div class="pl-4 flex items-center">
+      <a href="/"><img class="w-64 pr-3" src="/assets/images/logo.png" alt="Logo"></a>
+      <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-2xl" href="/"> 
+        Main Site Title
+      </a>
+    </div>
+    <div class="block lg:hidden pr-4">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+      <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+      </div>
+      <ul class="list-reset lg:flex justify-end items-center">
+        <li class="mr-3 py-2 lg:py-0">
+          <a class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" target="_blank" href="https://github.com/onehungrymind/phaser3-platform-jumper">
+            <img class="h-10 bg-blend-multiply" src="/assets/images/github-mark.png" alt="GitHub Repo">
+          </a>
+        </li>
+        <li class="mr-3 py-2 lg:py-0">
+          <a class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" target="_blank" href="https://stackblitz.com/edit/phaser3-platform-jumper">
+            <img class="h-10 bg-blend-multiply" src="/assets/images/stackblitz-mark.png" alt="Edit on StackBlitz">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+
+      <div class="w-full lg:w-1/5 lg:px-6 text-xl text-gray-800 leading-normal">
+  <h3 class="font-bold">Steps</h3>
+
+  <div class="block lg:hidden sticky inset-0">
+    <button id="menu-toggle" class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-purple-500 appearance-none focus:outline-none">
+      <svg class="fill-current h-3 float-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20" style="top:5em;" id="menu-content">
+    <ul class="list-reset">
+      
+    </ul>
+  </div>
+</div>
+
+      <div class="w-full prose max-w-none lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded">
+          
+<article><h1>Getting Started</h1>
+<hr>
+<pre class="language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Coming soon...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</article>
+
+      </div>
+
+      <div class="w-full lg:w-4/5 lg:ml-auto text-base md:text-sm text-gray-500 px-4 py-6">
+  <span class="text-base text-purple-500 font-bold">&lt;</span>
+  <a href="/" class="text-base md:text-sm text-purple-500 font-bold no-underline hover:underline">Back Home</a>
+</div>
+
+    </div>
+
+    <footer class="sticky top-[100vh] bg-white border-t border-gray-400 shadow">
+  <div class="container mx-auto flex py-8">
+    <div class="w-full mx-auto flex flex-wrap">
+      <div class="flex w-full lg:w-1/2 ">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">The Reason</h3>
+          <p class="py-4 text-gray-600 text-sm">
+            Programming has changed our lives in ways we could have never imagined. This site is a gift to help you on your programming journey. <strong>We hope you love this adventure!</strong>
+          </p>
+        </div>
+      </div>
+      <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">Made with Love</h3>
+          <a class="inline-block py-2 text-gray-900 font-bold no-underline" target="_blank" href="https://presolved.io">
+            <img class="h-12 bg-blend-multiply" src="/assets/images/presolved-logo-filled.png" alt="Presolved">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </html>
